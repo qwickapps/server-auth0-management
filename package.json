@@ -1,0 +1,65 @@
+{
+  "name": "@qwickapps/server-auth0-management",
+  "version": "1.0.0",
+  "description": "QwickApps Server plugin for managing Auth0 Actions programmatically",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./plugin": {
+      "types": "./dist/plugin.d.ts",
+      "import": "./dist/plugin.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "auth0",
+    "management",
+    "actions",
+    "qwickapps",
+    "server",
+    "plugin"
+  ],
+  "author": "QwickApps <legal@qwickapps.com>",
+  "license": "PolyForm-Shield-1.0.0",
+  "dependencies": {
+    "@qwickapps/auth0-management-client": "workspace:*"
+  },
+  "peerDependencies": {
+    "@qwickapps/server": "^1.0.0"
+  },
+  "devDependencies": {
+    "@qwickapps/server": "workspace:*",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qwickapps/server-auth0-management.git"
+  },
+  "homepage": "https://github.com/qwickapps/server-auth0-management#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
