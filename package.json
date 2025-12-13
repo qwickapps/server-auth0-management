@@ -34,13 +34,13 @@
   "author": "QwickApps <legal@qwickapps.com>",
   "license": "PolyForm-Shield-1.0.0",
   "dependencies": {
-    "@qwickapps/auth0-management-client": "workspace:*"
+    "@qwickapps/auth0-management-client": "^1.0.0"
   },
   "peerDependencies": {
     "@qwickapps/server": "^1.0.0"
   },
   "devDependencies": {
-    "@qwickapps/server": "workspace:*",
+    "@qwickapps/server": "^1.0.0",
     "@types/express": "^4.17.21",
     "@types/node": "^20.0.0",
     "typescript": "^5.0.0",
