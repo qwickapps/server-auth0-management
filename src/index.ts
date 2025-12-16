@@ -7,6 +7,7 @@
  * - Auth0 Management API client for deploying actions
  * - Server plugin with API routes for action management
  * - Downloadable action bundles for manual deployment
+ * - Auth0 tenant settings management with database storage
  *
  * @example
  * ```typescript
@@ -28,8 +29,10 @@
  * ```
  */
 
-// Export plugin
+// Export plugins
 export { auth0ManagementPlugin, default } from './plugin.js';
+export { createAuth0SettingsPlugin } from './settings-plugin.js';
+export type { Auth0SettingsPluginConfig } from './settings-plugin.js';
 
 // Export types
 export type {
@@ -54,3 +57,19 @@ export {
   getPostLoginActionMetadata,
 } from './management/index.js';
 export type { ActionMetadata } from './management/index.js';
+
+// Export settings service and types
+export {
+  Auth0SettingsService,
+} from './settings/index.js';
+export type {
+  Auth0M2MConfig,
+  Auth0TestResult,
+  SocialConnection,
+  Auth0SettingsStatus,
+  SaveM2MConfigInput,
+  EnvConfig,
+} from './settings/index.js';
+
+// Export settings routes creator
+export { createSettingsRoutes } from './routes/settings.js';
