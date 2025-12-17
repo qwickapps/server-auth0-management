@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationDir": "./dist-ui",
+    "outDir": "./dist-ui",
+    "rootDir": "./ui",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["react", "react-dom", "node"]
+  },
+  "include": ["ui/**/*"],
+  "exclude": ["node_modules", "dist", "dist-ui", "**/*.test.ts", "**/*.test.tsx"]
+}

@@ -207,6 +207,29 @@ export const auth0ManagementPlugin: Plugin = {
       pluginId: PLUGIN_ID,
     });
 
+    // Register page contribution for control panel
+    // Note: The actual React component must be registered by the consumer app
+    // using the exported Auth0ActionsPage from '@qwickapps/server-auth0-management/ui'
+    registry.addPage({
+      id: 'auth0-actions-page',
+      route: '/auth0/actions',
+      component: 'Auth0ActionsPage',
+      title: 'Auth0 Actions',
+      pluginId: PLUGIN_ID,
+    });
+
+    // Register widget contribution for dashboard
+    // Note: The actual React component must be registered by the consumer app
+    // using getAuth0WidgetComponents() from '@qwickapps/server-auth0-management/ui'
+    registry.addWidget({
+      id: 'auth0-status-widget',
+      title: 'Auth0 Actions',
+      component: 'Auth0StatusWidget',
+      priority: 80,
+      showByDefault: true,
+      pluginId: PLUGIN_ID,
+    });
+
     logger.info(`[auth0-management] Plugin started for domain: ${config.domain}`);
   },
 

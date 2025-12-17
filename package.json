@@ -13,15 +13,20 @@
     "./plugin": {
       "types": "./dist/plugin.d.ts",
       "import": "./dist/plugin.js"
+    },
+    "./ui": {
+      "types": "./ui/index.ts",
+      "import": "./ui/index.ts"
     }
   },
   "scripts": {
     "build": "tsc",
+    "build:ui": "tsc -p tsconfig.ui.json",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "lint": "eslint src --ext .ts",
-    "clean": "rm -rf dist"
+    "lint": "eslint src ui --ext .ts,.tsx",
+    "clean": "rm -rf dist dist-ui"
   },
   "keywords": [
     "auth0",
@@ -37,17 +42,54 @@
     "@qwickapps/auth0-management-client": "workspace:*"
   },
   "peerDependencies": {
-    "@qwickapps/server": "^1.0.0"
+    "@qwickapps/server": "^1.0.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "react-router-dom": "^6.0.0 || ^7.0.0",
+    "@mui/material": "^6.0.0",
+    "@qwickapps/react-framework": "^1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "react-router-dom": {
+      "optional": true
+    },
+    "@mui/material": {
+      "optional": true
+    },
+    "@qwickapps/react-framework": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@qwickapps/server": "workspace:*",
+    "@qwickapps/react-framework": "workspace:*",
+    "@mui/material": "^6.0.0",
+    "@mui/icons-material": "^6.0.0",
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
     "@types/express": "^4.17.21",
     "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.0.0",
     "typescript": "^5.0.0",
-    "vitest": "^1.0.0"
+    "vitest": "^1.0.0",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "jsdom": "^24.0.0"
   },
   "files": [
     "dist",
+    "ui",
     "README.md",
     "LICENSE"
   ],
