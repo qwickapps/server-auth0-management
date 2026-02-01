@@ -225,6 +225,7 @@ export const auth0ManagementPlugin: Plugin = {
       id: 'auth0-status-widget',
       title: 'Auth0 Actions',
       component: 'Auth0StatusWidget',
+      type: 'status',
       priority: 80,
       showByDefault: true,
       pluginId: PLUGIN_ID,

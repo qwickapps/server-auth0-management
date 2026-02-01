@@ -67,8 +67,8 @@
     }
   },
   "devDependencies": {
-    "@qwickapps/server": "^1.6.1",
-    "@qwickapps/react-framework": "^1.5.9",
+    "@qwickapps/server": "^1.8.0",
+    "@qwickapps/react-framework": "^1.6.0",
     "@mui/material": "^6.0.0",
     "@mui/icons-material": "^6.0.0",
     "@emotion/react": "^11.0.0",
